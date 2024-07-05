@@ -56,16 +56,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
-# Explanation
-# Padding and Unpadding: AES requires input data to be a multiple of its block size (16 bytes). The pad function adds padding to the data, and the unpad function removes it after decryption.
-
-# Encrypting and Decrypting:
-# encrypt_file reads the plaintext from the input file, pads it, encrypts it using AES-256 in CBC mode, and writes the IV (initialization vector) followed by the ciphertext to the output file.
-# decrypt_file reads the IV and ciphertext from the input file, decrypts it using AES-256 in CBC mode, unpads the plaintext, and writes it to the output file.
-
-# Main Function:
-# Generates a 128 MB file filled with random data.
-# Encrypts the generated file.
-# Decrypts the encrypted file.
-# Verifies that the decrypted file matches the original file.
